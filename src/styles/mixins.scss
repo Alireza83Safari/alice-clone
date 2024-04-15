@@ -1,0 +1,16 @@
+@import "./variables.scss";
+
+@mixin container {
+  margin: 0 auto !important;
+  width: 100%;
+
+  @media screen and (min-width: $lg-breakpoint) {
+    max-width: 900px;
+  }
+  @media screen and (min-width: $xl-breakpoint) {
+    max-width: 1100px;
+  }
+  @media screen and (min-width: $xxl-breakpoint) {
+    max-width: 1400px;
+  }
+}

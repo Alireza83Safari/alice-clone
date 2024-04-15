@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "iransans";
+  src: url("/fonts/IRANSansMedium.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "iransans";
+  position: relative;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
