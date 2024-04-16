@@ -192,6 +192,7 @@
           @media screen and (min-width: $md-breakpoint) {
             left: -150px;
             max-width: 550px;
+            bottom: -100px;
           }
           @media screen and (min-width: $lg-breakpoint) {
             left: -300px;
@@ -200,7 +201,6 @@
           @media screen and (min-width: $xl-breakpoint) {
             left: -200px;
             max-width: 650px;
-            bottom: -100px;
           }
           @media screen and (min-width: $xxl-breakpoint) {
             left: -100px;
