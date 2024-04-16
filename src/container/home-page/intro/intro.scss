@@ -1,0 +1,285 @@
+@import "@/styles/mixins.scss";
+
+.intro {
+  height: auto;
+  min-height: 1200px;
+  display: flex;
+  background-color: #0d9c75;
+  background-image: linear-gradient(0deg, #0d9c75 0%, #99de0b 100%);
+  position: relative;
+  overflow: visible;
+
+  .intro-container {
+    @include container;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+
+    .intro-title {
+      margin-top: 180px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      h1 {
+        font-weight: bolder;
+        color: white;
+        font-size: 43px;
+
+        @media screen and (min-width: $md-breakpoint) {
+          font-size: 64px;
+        }
+      }
+
+      p {
+        text-align: center;
+        font-size: 14px;
+        @media screen and (min-width: $md-breakpoint) {
+          font-size: 18px;
+        }
+      }
+
+      button {
+        background-color: white;
+        border: none;
+        font-size: 15px;
+        border-radius: 33px;
+        transition: all 0.5s;
+        z-index: 2;
+        padding: 10px 20px;
+        margin-top: 20px;
+
+        @media screen and (min-width: $md-breakpoint) {
+          padding: 20px 33px;
+          font-size: 18px;
+          margin-top: 40px;
+        }
+        &:hover {
+          background-color: $blue;
+          color: white;
+          scale: 1.12;
+        }
+      }
+    }
+
+    .intro-motion {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      margin-top: 1000px;
+
+      .right-motion {
+        position: absolute;
+        right: 0;
+
+        .cloud-img {
+          position: absolute;
+
+          // animation: cloud-line 12s cubic-bezier(1, 0, 0, 1) infinite;
+
+          @media screen and (min-width: $xl-breakpoint) {
+            right: 450px;
+            bottom: 200px;
+          }
+          @media screen and (min-width: $xxl-breakpoint) {
+            right: 450px;
+            bottom: 200px;
+          }
+
+          @keyframes cloud-line {
+            0% {
+              transform: translateX(30px);
+            }
+            50% {
+              transform: translateX(-30px);
+            }
+            100% {
+              transform: translateX(30px);
+            }
+          }
+        }
+
+        .intro-img {
+          position: absolute;
+          height: auto;
+          @media screen and (max-width: $md-breakpoint) {
+            right: -200px;
+            bottom: 200px;
+            max-width: 450px;
+          }
+          @media screen and (min-width: $md-breakpoint) {
+            bottom: 100px;
+            right: -150px;
+          }
+          @media screen and (min-width: $lg-breakpoint) {
+            right: -200px;
+            max-width: 500px;
+            bottom: 200px;
+            height: auto;
+          }
+          @media screen and (min-width: $xl-breakpoint) {
+            right: -250px;
+            max-width: 600px;
+            bottom: 100px;
+          }
+          @media screen and (min-width: $xxl-breakpoint) {
+            right: -100px;
+          }
+
+          //   animation: imgintro2 10s cubic-bezier(1, 0, 0, 1) infinite;
+
+          @keyframes imgintro2 {
+            0% {
+              transform: translate(-30px, -30px);
+            }
+            50% {
+              transform: translate(30px, 30px);
+            }
+            100% {
+              transform: translate(-30px, -30px);
+            }
+          }
+        }
+
+        .intro-bg {
+          position: absolute;
+          z-index: -1;
+          height: auto;
+
+          @media screen and (max-width: $md-breakpoint) {
+            right: -200px;
+            bottom: 200px;
+            max-width: 450px;
+          }
+          @media screen and (min-width: $md-breakpoint) {
+            bottom: 100px;
+            right: -150px;
+          }
+          @media screen and (min-width: $lg-breakpoint) {
+            right: -200px;
+            bottom: 200px;
+            max-width: 500px;
+            height: auto;
+          }
+          @media screen and (min-width: $xl-breakpoint) {
+            right: -250px;
+            bottom: 100px;
+            max-width: 600px;
+          }
+          @media screen and (min-width: $xxl-breakpoint) {
+            right: -100px;
+          }
+
+          //  animation: imgintro2 7s cubic-bezier(1, 0, 0, 1) infinite;
+        }
+      }
+
+      .left-motion {
+        .intro-bg {
+          position: absolute;
+          // animation: bgintro2 10s cubic-bezier(1, 0, 0, 1) infinite;
+          z-index: 1;
+          height: auto;
+
+          @media screen and (max-width: $md-breakpoint) {
+            left: -240px;
+            max-width: 620px;
+            bottom: -50px;
+          }
+          @media screen and (min-width: $md-breakpoint) {
+            left: -150px;
+            max-width: 550px;
+          }
+          @media screen and (min-width: $lg-breakpoint) {
+            left: -300px;
+            max-width: 600px;
+          }
+          @media screen and (min-width: $xl-breakpoint) {
+            left: -200px;
+            max-width: 650px;
+            bottom: -100px;
+          }
+          @media screen and (min-width: $xxl-breakpoint) {
+            left: -100px;
+          }
+
+          @keyframes bgintro2 {
+            0% {
+              transform: translateY(30px);
+            }
+            50% {
+              transform: translateY(-30px);
+            }
+            100% {
+              transform: translateY(30px);
+            }
+          }
+        }
+
+        .intro-img {
+          position: absolute;
+          height: auto;
+
+          @media screen and (max-width: $md-breakpoint) {
+            left: -240px;
+            bottom: 0;
+            max-width: 620px;
+            bottom: -50px;
+          }
+          @media screen and (min-width: $md-breakpoint) {
+            left: -150px;
+            bottom: 0;
+            max-width: 600px;
+          }
+          @media screen and (min-width: $lg-breakpoint) {
+            left: -300px;
+          }
+          @media screen and (min-width: $xl-breakpoint) {
+            left: -200px;
+            max-width: 650px;
+            bottom: -100px;
+          }
+          @media screen and (min-width: $xxl-breakpoint) {
+            left: -100px;
+          }
+          //    animation: bgintro2 15s cubic-bezier(1, 0, 0, 1) infinite;
+        }
+
+        .cloud-img {
+          position: absolute;
+          bottom: 600px;
+
+          @media screen and (max-width: $md-breakpoint) {
+            width: 250px;
+            right: -450px;
+          }
+          @media screen and (min-width: $md-breakpoint) {
+            left: -50px;
+          }
+          @media screen and (min-width: $lg-breakpoint) {
+            left: -50px;
+          }
+          @media screen and (min-width: $xxl-breakpoint) {
+            left: 0;
+          }
+          // animation: imgintro3 15s cubic-bezier(1, 0, 0, 1) infinite;
+
+          @keyframes imgintro3 {
+            0% {
+              transform: translateX(-30px);
+            }
+            50% {
+              transform: translateX(30px);
+            }
+            100% {
+              transform: translateX(-30px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
