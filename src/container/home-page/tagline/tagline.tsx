@@ -59,10 +59,3 @@ const Tagline = () => {
 };
 
 export default Tagline;
-
-/* 
- <div>تولید مکانیزه</div>
-            <div>توزیع سراسری</div>
-            <div>محصولات صادراتی</div>
-            <div>بهترین مواد اولیه</div>
-            <div>تکنولوژی روز</div> */

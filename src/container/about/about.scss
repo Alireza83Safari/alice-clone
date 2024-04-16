@@ -1,0 +1,158 @@
+@import "@/styles/mixins.scss";
+
+.about {
+  position: relative;
+  padding: 100px 0;
+  background-color: #d2edc7;
+  background-image: linear-gradient(0deg, #d2edc7 0%, #38cabe 100%);
+
+  .about-container {
+    @include container;
+    @media screen and (min-width: $md-breakpoint) {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    .about-image {
+      grid-column: span 5 / span 5;
+      position: relative;
+      order: 2 !important;
+      @media screen and (min-width: $md-breakpoint) {
+        order: 1 !important;
+      }
+
+      .alis-img {
+        height: auto;
+        z-index: 1;
+        min-width: 100%;
+
+        @media screen and (max-width: $sm-breakpoint) {
+          width: 100%;
+        }
+
+        @media screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint) {
+          position: absolute;
+          right: -150px;
+          max-width: 500px;
+          object-fit: contain;
+        }
+        @media screen and (min-width: $lg-breakpoint) {
+          max-width: 100%;
+        }
+      }
+
+      .mint {
+        animation: anim_img2_m 7s cubic-bezier(1, 0, 0, 1) infinite;
+        position: absolute;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+
+        @keyframes anim_img2_m {
+          0% {
+            transform: translateY(-30px);
+          }
+          50% {
+            transform: translateY(30px);
+          }
+          100% {
+            transform: translateY(-30px);
+          }
+        }
+      }
+    }
+
+    .about-content {
+      grid-column: span 7 / span 7;
+      padding: 0 40px;
+      max-width: 100%;
+      order: 1 !important;
+      @media screen and (min-width: $md-breakpoint) {
+        order: 2 !important;
+      }
+      @media screen and (min-width: $lg-breakpoint) {
+        max-width: 471px;
+        padding: 0;
+      }
+      @media screen and (min-width: $xl-breakpoint) {
+        max-width: 588px;
+      }
+      @media screen and (min-width: $xxl-breakpoint) {
+        max-width: 723px;
+      }
+
+      .about-title {
+        font-size: 33px;
+        font-weight: 900;
+        color: #00174a;
+        @media screen and (min-width: $md-breakpoint) {
+          font-size: 48px;
+        }
+        @media screen and (min-width: $xl-breakpoint) {
+          font-size: 68px;
+        }
+      }
+      .about-subtitle {
+        font-size: 15px;
+        color: #00174a;
+        margin-top: 15px;
+
+        @media screen and (min-width: $md-breakpoint) {
+          font-size: 18px;
+          line-height: 34px;
+        }
+      }
+      .about-desc {
+        font-size: 14px;
+        color: #00174a;
+        padding-bottom: 20px;
+        border-bottom: 3px solid #00174a;
+        margin-top: 20px;
+        font-weight: 300;
+        line-height: 24px;
+      }
+
+      .about-more {
+        display: block;
+        margin: 20px 0;
+      }
+
+      .about-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: $xl-breakpoint) {
+          display: none;
+        }
+
+        .green {
+          background-color: #006956 !important;
+        }
+
+        div {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          background: gray;
+          display: flex;
+          justify-content: center !important;
+          align-items: center !important;
+          background-color: #009989;
+
+          b {
+            font-size: 19px;
+            font-weight: 600;
+            color: white;
+            transform: rotate(-22deg);
+            text-align: center;
+            line-height: 1.2em;
+            letter-spacing: -1px;
+            padding: 15px;
+          }
+        }
+      }
+    }
+  }
+}
