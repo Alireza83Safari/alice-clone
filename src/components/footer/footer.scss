@@ -1,0 +1,147 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.footer {
+  background: #00174a;
+  padding: 50px 0;
+
+  @media screen and (min-width: $lg-breakpoint) {
+    padding: 100px 0;
+  }
+
+  .footer-container {
+    @include container;
+    padding: 0 50px;
+
+    @media screen and (min-width: $lg-breakpoint) {
+      padding: 0;
+    }
+
+    .footer-top {
+      @media screen and (min-width: $lg-breakpoint) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-top-description {
+        color: white;
+        display: none;
+
+        @media screen and (min-width: $lg-breakpoint) {
+          display: block;
+        }
+        h2 {
+          font-size: 28px;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 300;
+          margin-top: 20px;
+        }
+      }
+
+      .footer-top-address {
+        color: white;
+        text-align: end;
+
+        h2 {
+          font-size: 38px;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 300;
+          margin: 20px 0;
+        }
+        .social-container {
+          flex-wrap: nowrap;
+          margin: 0 2px;
+
+          @media screen and (max-width: $xs-breakpoint) {
+            display: flex;
+            justify-content: center;
+          }
+
+          .social-img {
+            @media screen and (min-width: $lg-breakpoint) {
+              margin: 0 8px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      display: block;
+      color: white;
+      margin-top: 40px;
+
+      @media screen and (min-width: $lg-breakpoint) {
+        display: flex;
+      }
+
+      .logo {
+        margin-left: 80px;
+        display: none;
+
+        @media screen and (min-width: $lg-breakpoint) {
+          display: flex;
+        }
+      }
+      .footer-menu {
+        margin-left: 80px;
+        margin-top: 30px;
+
+        @media screen and (min-width: $lg-breakpoint) {
+          margin-top: 0;
+        }
+
+        h3 {
+          @media screen and (min-width: $lg-breakpoint) {
+            margin-bottom: 14px;
+          }
+        }
+        ul {
+          display: flex;
+          gap: 0 40px;
+          flex-wrap: wrap;
+
+          @media screen and (min-width: $lg-breakpoint) {
+            display: block;
+            padding-right: 20px;
+          }
+
+          li {
+            margin-top: 10px;
+            font-size: 14px;
+            white-space: nowrap;
+
+            a {
+              text-decoration: none;
+              color: white;
+
+              &::marker {
+                color: #4c5c80;
+              }
+
+              &:hover::marker {
+                color: white;
+              }
+
+              &:hover {
+                color: #bff200;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer-copyright {
+      margin-top: 80px;
+      color: white;
+      b {
+        margin-left: 10px;
+      }
+    }
+  }
+}
