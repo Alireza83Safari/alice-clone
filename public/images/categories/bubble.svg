@@ -1,0 +1,19 @@
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="123"
+      height="72"
+      viewBox="0 0 123 72"
+    >
+      <path
+        fill="#fff"
+        d="M93.884 3.161A31.873 31.873 0 0080 0H32a32 32 0 100 64h48a32.022 32.022 0 0030.03-43.082A12 12 0 1093.884 3.161z"
+        data-name="Union 1"
+        transform="rotate(180 61.5 32)"
+      ></path>
+      <path
+        fill="#fff"
+        d="M5.5 0A5.5 5.5 0 110 5.5 5.5 5.5 0 015.5 0z"
+        data-name="Path 44"
+        transform="translate(0 61)"
+      ></path>
+    </svg>

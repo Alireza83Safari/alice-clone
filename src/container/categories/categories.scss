@@ -1,0 +1,224 @@
+@import "@/styles/mixins.scss";
+
+.categories {
+  position: relative;
+  padding: 50px 0 150px;
+  background-color: #d8b4d6;
+  background-image: linear-gradient(0deg, #d8b4d6 0%, #d2edc7 100%);
+
+  .categories-container {
+    @include container;
+
+    .categories-items {
+      min-width: 100%;
+      list-style-type: none;
+      display: flex;
+      overflow-x: scroll;
+      max-width: 100vw;
+      white-space: nowrap;
+      gap: 15px 0;
+      padding-bottom: 16px;
+
+      a {
+        margin: 0 6px;
+        background: white;
+        border-radius: 50px;
+        font-weight: 400;
+        padding: 12px;
+        font-size: 14px;
+        color: black;
+        text-decoration: none;
+
+        @media screen and (min-width: $md-breakpoint) {
+          padding: 15px;
+          font-size: 16px;
+        }
+
+        @media screen and (min-width: $xxl-breakpoint) {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .categories-grid {
+      position: relative;
+      margin-bottom: 15px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      @media screen and (max-width: $xs-breakpoint) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+      @media screen and (min-width: $md-breakpoint) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      @media screen and (min-width: $lg-breakpoint) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .prothumb {
+        &:hover {
+          .pro_chat {
+            opacity: 1;
+          }
+          .pro_chat .bl1 {
+            transition: all 300ms cubic-bezier(1, 0, 0, 1);
+            transform: translateX(40px) scale(1);
+          }
+          .pro_chat .bl2 {
+            transition: all 300ms 200ms cubic-bezier(1, 0, 0, 1);
+            transform: translateX(-40px) scale(1);
+          }
+          .pro_chat .bubble-text-right {
+            transition: all 300ms 350ms cubic-bezier(1, 0, 0, 1);
+            transform: translateX(120px) scale(1);
+          }
+          .pro_chat .bubble-text-left {
+            transition: all 1000ms 100ms cubic-bezier(1, 0, 0, 1);
+            transform: translateX(-120px) scale(1);
+          }
+        }
+      }
+
+      .prothumb {
+        position: relative;
+        display: flex;
+        padding: 15px;
+        max-width: 245px;
+        margin: 0 auto;
+        margin-top: 20px;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        &:hover .left-image {
+          filter: blur(5px);
+          transform: translateX(-60px) translateY(15px) scale(0.7)
+            rotate(-10deg);
+          transition: all 200ms cubic-bezier(1, 0, 0, 1);
+        }
+        &:hover .center-image {
+          transform: translateY(15px) scale(1.3) rotate(-10deg);
+          transition: all 1000ms cubic-bezier(1, 0, 0, 1);
+        }
+        &:hover .right-image {
+          filter: blur(5px);
+          transform: translateX(60px) translateY(15px) scale(0.7) rotate(10deg);
+          transition: all 200ms cubic-bezier(1, 0, 0, 1);
+        }
+
+        .pro_chat {
+          z-index: 9;
+          position: relative;
+          opacity: 0;
+
+          .bubble {
+            div {
+              position: absolute;
+              right: 0;
+              left: 0;
+              top: 0;
+              text-align: center;
+              display: flex;
+              align-content: center;
+              justify-content: center;
+              align-items: center;
+              height: 42px;
+              width: 100%;
+              padding: 0 0 0 9px;
+
+              i {
+                background: gray;
+                width: 9px;
+                height: 9px;
+                display: inline-block;
+                border-radius: 50%;
+                margin: 0 2px;
+                animation: blink 1s 0.1s infinite;
+                -webkit-animation: blink 1s 0.1s infinite;
+              }
+            }
+          }
+
+          .writing {
+            width: 80px;
+          }
+
+          .bubble-text-right {
+            background: white;
+            padding: 20px 25px;
+            font-size: 15px;
+            z-index: -111;
+            width: 180px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            display: block;
+            border-radius: 24px 24px 24px 0;
+            transform: translateX(0) scale(0);
+          }
+          .bubble-text-left {
+            background: white;
+            padding: 20px 25px;
+            font-size: 15px;
+            z-index: -111;
+            width: 180px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 200px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 24px 0 24px 24px;
+            transform: translateX(0) scale(0);
+          }
+        }
+        .bl1 {
+          position: absolute;
+          top: 180px;
+        }
+        .bl2 {
+          position: absolute;
+          top: 100px;
+          right: 150px;
+        }
+      }
+
+      .image-container {
+        .left-image {
+          position: absolute;
+          right: 0;
+          left: 0;
+          transition: all 1000ms cubic-bezier(1, 0, 0, 1);
+          transform: translateX(-44px) translateY(15px) scale(0.8);
+          @media screen and (min-width: $xl-breakpoint) {
+            transform: translateX(-60px) translateY(15px) scale(0.8);
+          }
+        }
+        .center-image {
+          z-index: 2;
+        }
+        .right-image {
+          position: absolute;
+          right: 0;
+          left: 0;
+          transition: all 1000ms cubic-bezier(1, 0, 0, 1);
+          transform: translateX(44px) translateY(15px) scale(0.8);
+
+          @media screen and (min-width: $xl-breakpoint) {
+            transform: translateX(60px) translateY(15px) scale(0.8);
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+}
