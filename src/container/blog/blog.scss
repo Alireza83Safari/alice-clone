@@ -1,0 +1,62 @@
+@import "@/styles/mixins.scss";
+@import "@/styles/variables.scss";
+
+.blog {
+  background-color: #8ec5fc;
+  background-image: linear-gradient(0deg, #8ec5fc 0%, #d8b4d6 100%);
+  min-width: 100%;
+
+  .blog-container {
+    @include container;
+
+    .blog-title {
+      font-size: 70px;
+      color: $blue;
+      text-align: center;
+      grid-column: span 2 / span 2;
+    }
+
+    .blog-grid {
+      margin-top: 50px;
+      column-gap: 10px;
+
+      @media screen and (min-width: $lg-breakpoint) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      @media screen and (min-width: $xxl-breakpoint) {
+        column-gap: 30px;
+      }
+
+      .blog-big {
+        min-width: 100%;
+      }
+
+      .blog-small {
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+
+        @media screen and (min-width: $xxl-breakpoint) {
+          gap: 30px;
+        }
+
+        div {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .blog-slider {
+      margin-top: 40px;
+      flex-wrap: nowrap;
+      min-width: 100vw;
+
+      .swiper-slide {
+        width: 350px;
+        max-width: 350px;
+      }
+    }
+  }
+}

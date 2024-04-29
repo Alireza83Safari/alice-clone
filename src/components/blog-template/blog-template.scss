@@ -1,0 +1,34 @@
+.blog-template {
+  background: #efe7ff;
+  border-radius: 25px;
+  padding-bottom: 20px;
+
+  .blog-image-container {
+    position: relative;
+    margin: 5px;
+
+    .blog-category {
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.2);
+      color: white;
+      padding: 7px 15px;
+      border-radius: 15px;
+      font-size: 14px;
+    }
+    .blog-image {
+      width: 100%;
+      height: 100%;
+      margin-top: 5px;
+      border-radius: 25px;
+      object-fit: contain;
+    }
+  }
+
+  h2 {
+    font-size: 16px;
+    padding-right: 20px;
+  }
+}

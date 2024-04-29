@@ -5,6 +5,7 @@ export default function layout(props: {
   tagline: React.ReactNode;
   about: React.ReactNode;
   categories: React.ReactNode;
+  blog: React.ReactNode;
 }) {
   return (
     <>
@@ -12,6 +13,7 @@ export default function layout(props: {
       {props.tagline}
       {props.about}
       {props.categories}
+      {props.blog}
     </>
   );
 }
