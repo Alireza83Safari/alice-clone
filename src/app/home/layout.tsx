@@ -6,6 +6,7 @@ export default function layout(props: {
   about: React.ReactNode;
   categories: React.ReactNode;
   blog: React.ReactNode;
+  news: React.ReactNode;
 }) {
   return (
     <>
@@ -14,6 +15,7 @@ export default function layout(props: {
       {props.about}
       {props.categories}
       {props.blog}
+      {props.news}
     </>
   );
 }

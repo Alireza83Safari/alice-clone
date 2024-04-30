@@ -1,0 +1,37 @@
+@import "@/styles/mixins.scss";
+@import "@/styles/variables.scss";
+
+.news-template {
+  background-color: white;
+  border-radius: 20px;
+  padding: 50px;
+  z-index: 99;
+
+  &:hover {
+    scale: 1.06;
+    transition: all 1s;
+  }
+
+  .news-template-subtitle {
+    display: flex;
+    p {
+      margin-left: 20px;
+      color: #939393;
+      font-size: 13px;
+    }
+  }
+
+  .news-template-title {
+    margin-top: 15px;
+    font-size: 22px;
+    color: $blue;
+  }
+
+  .news-template-description {
+    margin-top: 50px;
+    font-size: 14px;
+    color: $blue;
+    font-weight: 200;
+    margin-bottom: 1rem;
+  }
+}
