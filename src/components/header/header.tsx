@@ -6,9 +6,10 @@ import "./header.scss";
 const Header = () => {
   const [isShowPorudtcsMenu, setShowPorudtcsMenu] = useState(false);
   const [isShowMoreMenu, setShowMoreMenu] = useState(false);
-  const scrollRef = useRef(0);
   const [showMenu, setShowMenu] = useState(false);
+  const [showLanguages, setShowLanguages] = useState(false);
   const [scrolling, setScrolling] = useState(false);
+  const scrollRef = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -103,9 +104,53 @@ const Header = () => {
       </div>
 
       <div className="header-left-menu">
-        <img src="/icons/earth.svg" alt="earth" className="earth-icon" />
-        <img src="/icons/juice.svg" alt="juice" className="juice-icon" />
-        <img src="/icons/letter.svg" alt="letter" className="letter-icon" />
+        <Link href="#">
+          <div
+            className="image-container"
+            onClick={() => setShowLanguages(!showLanguages)}
+          >
+            <img src="/icons/earth.svg" alt="earth" className="earth-icon" />
+          </div>
+          {showLanguages && (
+            <div className="languages">
+              <div className="language-item">
+                <div className="language-info">
+                  <p>EN</p>
+                  <span>English</span>
+                </div>
+                <span className="language-coming-soon">به زودی</span>
+              </div>
+              <div className="language-item">
+                <div className="language-info">
+                  <p>RU</p>
+                  <span>Russian</span>
+                </div>
+                <span className="language-coming-soon">به زودی</span>
+              </div>
+              <div className="language-item">
+                <div className="language-info">
+                  <p>AR</p>
+                  <span>Arabic</span>
+                </div>
+                <span className="language-coming-soon">به زودی</span>
+              </div>
+            </div>
+          )}
+        </Link>
+
+        <Link href="/products/">
+          <div className="image-container">
+            <img src="/icons/juice.svg" alt="juice" className="juice-icon" />
+          </div>
+          <span className="tooltip">محصولات</span>
+        </Link>
+
+        <Link href="/contact-us/">
+          <div className="image-container">
+            <img src="/icons/letter.svg" alt="letter" className="letter-icon" />
+          </div>
+          <span className="tooltip">تماس با ما</span>
+        </Link>
         <span
           className={` burger-menu ${showMenu ? "open" : ""}`}
           onClick={() => setShowMenu(!showMenu)}

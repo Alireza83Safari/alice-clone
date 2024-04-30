@@ -1,4 +1,5 @@
 @import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
 
 .header {
   background: transparent;
@@ -90,10 +91,10 @@
         padding: 17px 35px;
         padding-top: -2px;
         border-radius: 20px;
-        transition: all 2000ms cubic-bezier(1, 0, 0, 1);
+        transition: all 500ms;
 
         &:hover {
-          background: #a5e143;
+          background: $bg-hover;
         }
         @media screen and (max-width: $lg-breakpoint) {
           padding-bottom: 24px;
@@ -180,6 +181,7 @@
 
   .header-left-menu {
     display: flex;
+    align-items: center;
     margin-left: 19px;
 
     @media screen and (min-width: $lg-breakpoint) {
@@ -187,6 +189,80 @@
     }
     @media screen and (min-width: $xxl-breakpoint) {
       margin-right: 100px;
+    }
+
+    a {
+      color: white;
+      position: relative;
+      @include tooltip;
+
+      &:hover .tooltip {
+        display: flex;
+      }
+
+      .languages {
+        position: absolute;
+        top: 50px;
+        right: -200px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 16px;
+        min-width: 16rem;
+
+        .language-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 14px;
+
+          &:hover p {
+            background-color: black;
+            color: white;
+          }
+
+          &:hover span {
+            color: black !important;
+          }
+
+          .language-info {
+            display: flex;
+            align-items: center;
+            color: black;
+
+            p {
+              padding: 5px;
+              border: 2px solid black;
+              border-radius: 10px;
+              font-size: 12px;
+              font-weight: 900;
+              margin-left: 10px;
+            }
+
+            span {
+              font-size: 15px;
+              font-weight: 700;
+              color: gray;
+            }
+          }
+
+          .language-coming-soon {
+            color: gray;
+            font-size: 13px;
+            font-weight: 900;
+          }
+        }
+      }
+
+      .image-container {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background: $bg-hover;
+          padding: 10px 0;
+          border-radius: 10px;
+        }
+      }
     }
 
     img {
@@ -218,6 +294,7 @@
       align-items: center;
       margin-right: 5px;
       margin-left: 20px;
+      margin-bottom: 22px;
       z-index: 1;
       transition: all 500ms cubic-bezier(1, 0, 0, 1);
       transition-property: transform;
