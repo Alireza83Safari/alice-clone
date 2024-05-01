@@ -1,0 +1,56 @@
+@import "@/styles/mixins.scss";
+@import "@/styles/variables.scss";
+
+.bourse-info {
+  @include container;
+
+  .bourse-info-category {
+    .bourse-info-list {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      gap: 14px;
+      overflow-x: auto;
+      padding-bottom: 20px;
+
+      @media screen and (min-width: $lg-breakpoint) {
+        flex-wrap: wrap;
+      }
+
+      .bourse-info-list-item {
+        background-color: white;
+        padding: 14px 20px;
+        border-radius: 30px;
+        transition: all 0.5s;
+        white-space: nowrap;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $text-blue;
+        }
+
+        &:hover .bourse-info-list-link {
+          color: white;
+        }
+
+        .bourse-info-list-link {
+          color: black;
+        }
+      }
+    }
+  }
+
+  .bourse-info-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    img {
+      @media screen and (max-width: $lg-breakpoint) {
+        width: 100vw;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}
