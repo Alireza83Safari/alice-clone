@@ -1,0 +1,122 @@
+@import "@/styles/mixins.scss";
+@import "@/styles/variables.scss";
+
+.contact {
+  max-width: 1000px;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $lg-breakpoint) {
+    padding-top: 180px;
+  }
+
+  .contact-title {
+    text-align: center;
+    color: $text-blue;
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $lg-breakpoint) {
+      font-size: 44px;
+    }
+  }
+
+  .contact-content {
+    @media screen and (min-width: $md-breakpoint) {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    .contact-form {
+      grid-column: span 7 / span 7;
+
+      div {
+        margin-bottom: 20px !important;
+        margin: 0 7px;
+        label {
+          display: block;
+          margin-bottom: 10px;
+          color: $text-blue;
+          font-weight: 800;
+
+          span {
+            color: red;
+            font-size: 11px;
+            font-weight: 800;
+            margin-right: 10px;
+          }
+        }
+        input {
+          background-color: white;
+          border: none;
+          padding: 16.6px;
+          border-radius: 16px;
+          width: 100%;
+          outline-color: $blue;
+        }
+
+        textarea {
+          background-color: white;
+          border: none;
+          padding: 16px;
+          border-radius: 16px;
+          width: 100%;
+          min-height: 18rem;
+          outline-color: $blue;
+        }
+      }
+      .contact-form-submit {
+        min-width: 100%;
+        color: white;
+        background-color: $text-blue;
+        padding: 19px;
+        outline: none;
+        border: none;
+        border-radius: 30px;
+        font-weight: 800;
+        font-size: 16px;
+        border: 2.4px solid $text-blue;
+
+        &:hover {
+          background-color: $green;
+        }
+      }
+    }
+
+    .contact-info {
+      padding-right: 40px;
+      font-size: 14px;
+      margin-top: 40px;
+
+      @media screen and (min-width: $md-breakpoint) {
+        grid-column: span 5 / span 5;
+        margin-top: 0;
+        padding-right: 70px;
+      }
+
+      .contact-info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 22px;
+
+        @media screen and (min-width: $md-breakpoint) {
+          margin-bottom: 30px;
+        }
+
+        div {
+          margin-right: 20px;
+
+          p {
+            color: #2f3034;
+
+            &:nth-child(2) {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
