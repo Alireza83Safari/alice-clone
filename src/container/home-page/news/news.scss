@@ -20,11 +20,14 @@
     }
 
     .news-slider {
-      padding: 40px 0;
+      @media screen and (min-width: $lg-breakpoint) {
+        padding: 20px 20px;
+      }
 
       .swiper-slide {
-        z-index: 99;
-        padding-bottom: 40px;
+        max-width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
       }
     }
   }

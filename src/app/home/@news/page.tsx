@@ -1,5 +1,6 @@
-import News from "@/container/news/news";
+import News from "@/container/home-page/news/news";
+import { newsData } from "@/data/data";
 
 export default function page() {
-  return <News />;
+  return <News news={newsData} />;
 }

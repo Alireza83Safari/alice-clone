@@ -1,4 +1,4 @@
-import About from "@/container/about/about";
+import About from "@/container/home-page/about/about";
 
 export default function page() {
   return <About />;
