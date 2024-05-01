@@ -51,11 +51,11 @@
     .blog-slider {
       margin-top: 40px;
       flex-wrap: nowrap;
-      min-width: 100vw;
 
       .swiper-slide {
         width: 350px;
         max-width: 350px;
+        margin-bottom: 40px;
       }
     }
   }

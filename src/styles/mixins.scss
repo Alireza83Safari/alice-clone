@@ -14,3 +14,64 @@
     max-width: 1400px;
   }
 }
+
+@mixin moreBtn {
+  margin: auto;
+  max-width: 350px;
+  border-radius: 50px;
+  padding: 15px 20px;
+  border: 2px solid $blue;
+  color: $blue;
+
+  @media screen and (max-width: 350px) {
+    max-width: 100%;
+  }
+}
+
+@mixin tooltip {
+  .tooltip {
+    display: none;
+    background: #000;
+    font-size: 13px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    position: absolute;
+    right: -7px;
+    white-space: nowrap;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -3px;
+      right: 30px;
+      transform: rotate(45deg);
+      width: 11px;
+      height: 11px;
+      background: #000;
+    }
+  }
+}
+
+@mixin btn {
+  button {
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    border-radius: 33px;
+    transition: all 0.5s;
+    z-index: 2;
+    padding: 10px 20px;
+    margin-top: 20px;
+
+    @media screen and (min-width: $md-breakpoint) {
+      padding: 20px 33px;
+      font-size: 18px;
+      margin-top: 40px;
+    }
+    &:hover {
+      background-color: $blue;
+      color: white;
+      scale: 1.12;
+    }
+  }
+}

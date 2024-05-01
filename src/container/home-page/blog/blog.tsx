@@ -4,7 +4,6 @@ import "./blog.scss";
 import BlogTemplate from "@/components/blog-template/blog-template";
 import "swiper/css";
 import "swiper/css/pagination";
-
 import { Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 
@@ -57,12 +56,19 @@ const Blog = () => {
 
         <div className="blog-slider">
           <Swiper
-            spaceBetween={30}
-            pagination={{
-              clickable: true,
+            spaceBetween={20}
+            breakpoints={{
+              1: {
+                slidesPerView: 2,
+              },
+              900: {
+                slidesPerView: 3,
+              },
             }}
-            modules={[Pagination]}
             className="mySwiper"
+            modules={[Pagination]}
+            pagination
+            loop
           >
             <SwiperSlide>
               <BlogTemplate

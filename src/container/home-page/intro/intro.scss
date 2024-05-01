@@ -78,7 +78,7 @@
         .cloud-img {
           position: absolute;
 
-          // animation: cloud-line 12s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: cloud-line 12s cubic-bezier(1, 0, 0, 1) infinite;
 
           @media screen and (min-width: $xl-breakpoint) {
             right: 450px;
@@ -129,7 +129,7 @@
             right: -100px;
           }
 
-          //   animation: imgintro2 10s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: imgintro2 10s cubic-bezier(1, 0, 0, 1) infinite;
 
           @keyframes imgintro2 {
             0% {
@@ -173,14 +173,14 @@
             right: -100px;
           }
 
-          //  animation: imgintro2 7s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: imgintro2 7s cubic-bezier(1, 0, 0, 1) infinite;
         }
       }
 
       .left-motion {
         .intro-bg {
           position: absolute;
-          // animation: bgintro2 10s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: bgintro2 10s cubic-bezier(1, 0, 0, 1) infinite;
           z-index: 1;
           height: auto;
 
@@ -245,7 +245,7 @@
           @media screen and (min-width: $xxl-breakpoint) {
             left: -100px;
           }
-          //    animation: bgintro2 15s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: bgintro2 15s cubic-bezier(1, 0, 0, 1) infinite;
         }
 
         .cloud-img {
@@ -265,7 +265,7 @@
           @media screen and (min-width: $xxl-breakpoint) {
             left: 0;
           }
-          // animation: imgintro3 15s cubic-bezier(1, 0, 0, 1) infinite;
+          animation: imgintro3 15s cubic-bezier(1, 0, 0, 1) infinite;
 
           @keyframes imgintro3 {
             0% {

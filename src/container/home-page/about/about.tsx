@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./about.scss";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -27,7 +28,9 @@ const About = () => {
             استانداردهای جهانی توانسته است سهم قابل توجهی از بازار کشورهای منطقه
             در حوزه نوشیدنی را به خود اختصاص دهد.
           </p>
-          <span className="about-more">بیشتر بدانید</span>
+          <Link href="/about-us/" className="about-more">
+            بیشتر بدانید
+          </Link>
           <div className="about-options">
             <div className="green">
               <b>تولید مکانیزه</b>

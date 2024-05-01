@@ -4,6 +4,10 @@
 .footer {
   background: #00174a;
   padding: 50px 0;
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
   @media screen and (min-width: $lg-breakpoint) {
     padding: 100px 0;
