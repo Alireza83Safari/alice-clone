@@ -1,0 +1,41 @@
+@import "@/styles/mixins.scss";
+@import "@/styles/variables.scss";
+
+.news-header {
+  @include container;
+
+  padding-top: 200px;
+  .news-title {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: $blue;
+    font-weight: 900;
+
+    @media screen and (min-width: $md-breakpoint) {
+      font-size: 30px;
+    }
+    @media screen and (min-width: $lg-breakpoint) {
+      font-size: 40px;
+    }
+  }
+
+  .news-input-container {
+    position: relative;
+
+    .news-input {
+      width: 100%;
+      padding: 20px;
+      border-radius: 15px;
+      border: none;
+      position: relative;
+      outline: none;
+    }
+
+    .news-icon {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+    }
+  }
+}
